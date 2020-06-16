@@ -1,0 +1,20 @@
+{
+  "name": "vegihub.in",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "mongoose": "^5.9.19",
+    "nodemailer": "^6.4.8",
+    "nodemon": "^2.0.4"
+  }
+}
