@@ -87,7 +87,10 @@ background: linear-gradient(to right, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, F
 .team-profile:hover{
   transform: translateY(-6px);
 }
-
+.menu{
+  border: 2px dashed;
+  padding: 5px 20px;
+}
 
 /* signature */
 
