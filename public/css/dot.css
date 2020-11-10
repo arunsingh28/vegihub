@@ -1,6 +1,6 @@
 .dot{
     position: absolute;
-    top: 130%;
+    top: 160%;
     height: 300px;
     width: 300px;
     left: -107px;
@@ -15,7 +15,7 @@
 }
 .dot3{
     position: absolute;
-    top: 310%;
+    top: 350%;
     left: -125px;
     height: 500px;
     width: 600px;
