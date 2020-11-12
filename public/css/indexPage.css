@@ -52,6 +52,9 @@
               height: 30vh;
               margin: 0px auto;
             }
+            .footer-svg{
+              margin-top: -135px;
+            }
           }
 /* blogs about section */
 .vegi_about{
@@ -91,6 +94,7 @@ background: linear-gradient(to right, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, F
   border: 2px dashed;
   padding: 5px 20px;
 }
+
 
 /* signature */
 

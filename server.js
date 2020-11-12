@@ -16,7 +16,7 @@ require('./config/passport')(passport)
 
 
 // db connection
-const db = "mongodb+srv://arun:1234@cluster0-t3qon.mongodb.net/shapeyou?retryWrites=true&w=majority"
+const db = "mongodb+srv://arun:1234@cluster0.t3qon.mongodb.net/vegihubV2"
 mongoose.connect(db,{useNewUrlParser: true,useUnifiedTopology : true})
 .then(()=> console.log('DataBase is Connected'))
 .catch(err => console.log(err))

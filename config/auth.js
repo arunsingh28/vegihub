@@ -1,4 +1,3 @@
-const userDB = require('../Models/user')
 
 module.exports = {
     ensureAuth : (req,res,next)=>{
@@ -11,8 +10,7 @@ module.exports = {
     forwardAuth : (req,res,next)=>{
         if(!req.isAuthenticated()){
             return next()
-        }else{
-            res.redirect('/welcome')
         }
+        res.redirect('/welcome')
     }
 }

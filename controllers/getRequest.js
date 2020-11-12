@@ -2,7 +2,7 @@ const express = require('express')
 const { ensureAuth, forwardAuth } = require('../config/auth');
 const get = express.Router()
 
-get.get('/',(req,res)=>{
+get.get('/',forwardAuth,(req,res)=>{
     res.render('home',{
         title : 'Home',
         reg : true
@@ -10,7 +10,7 @@ get.get('/',(req,res)=>{
 })
 
 
-get.get('/login',(req,res)=>{
+get.get('/login',forwardAuth,(req,res)=>{
     res.render('login',{
         title : 'Login',
         reg : true
@@ -18,7 +18,15 @@ get.get('/login',(req,res)=>{
 })
 
 
-get.get('/register',(req,res)=>{
+// Logout
+get.get('/logout', (req, res) => {
+    req.logout();
+    req.flash('success_msg', 'You are logged out');
+    res.redirect('/');
+  });
+  
+
+get.get('/register',forwardAuth,(req,res)=>{
     res.render('register',{
         title : 'Register',
         reg : false
@@ -26,7 +34,7 @@ get.get('/register',(req,res)=>{
 })
 
 get.get('/welcome',ensureAuth,(req,res)=>{ 
-    res.send('ok')
+    res.send(req.user)
 })
 
 
