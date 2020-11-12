@@ -24,15 +24,23 @@
         <!-- <a href="/html/gallary.html" class="mr-5 hover:text-white menu">Gallary</a>  -->
         </nav>    
       
-    <a href="/vegihub/login">
-        <button class="inline-flex items-center border-0 py-1 px-3 focus:outline-none rounded text-base mt-4 md:mt-0 login_btn">Register
-             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24" id="arrow">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-         </button>
-    </a>
+    <% if(reg) {%>
+        <a href="/register" style="z-index: 9;">
+            <button class="inline-flex items-center border-0 py-1 px-3 focus:outline-none rounded text-base mt-4 md:mt-0 login_btn">Register
+                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24" id="arrow">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+             </button>
+        </a>
+    <%}else{%>
+        <a href="/login" style="z-index: 9;">
+            <button class="inline-flex items-center border-0 py-1 px-3 focus:outline-none rounded text-base mt-4 md:mt-0 login_btn">Login
+                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24" id="arrow">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+             </button>
+        </a>
+    <%}%>   
 
-
-        
     </div>
 </header>

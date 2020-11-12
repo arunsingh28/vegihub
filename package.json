@@ -1,6 +1,6 @@
 {
   "name": "vegihub",
-  "version": "1.2.0",
+  "version": "2.1.0",
   "description": "vegihub backend",
   "main": "server.js",
   "scripts": {
@@ -12,17 +12,21 @@
   "author": "arun",
   "license": "MIT",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "bootstrap": "^4.5.3",
     "connect-flash": "^0.1.1",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.0",
-    "express-sessions": "^1.0.6",
+    "express-session": "^1.0.6",
     "mongoose": "^5.10.13",
-    "nodemon": "^2.0.6"
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.6",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
   },
   "engines": {
     "npm": "~6.14.4",
-    "node": "~12.16.2"
+    "node": "8"
   }
 }
