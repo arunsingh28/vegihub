@@ -13,6 +13,7 @@
         <p><%= success_msg %></p>
       </div>      
 <% } %>    
+  
 
 
 
@@ -22,3 +23,32 @@
     <p><%= error %></p>
   </div> 
 <% } %>  
+
+
+<!-- fade message -->
+<% if(fade_msg != '') {%>
+  <div class="fade_msg shadow-lg">
+      <p><%= fade_msg %></p>
+    </div>      
+<% } %>  
+
+
+<style>
+  .fade_msg{
+    position: absolute;
+    top: 120px;
+    right: 50%;
+    transform: translate(50%,-50%);
+    line-height: 60px;
+    border-radius: 3px;
+    background-color: rgb(222, 230, 214);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 0px 30px;
+  }
+</style>
+
+<script>
+   $('.fade_msg').delay(3000).fadeOut('slow'); 
+   $('.fade').delay(3000).fadeOut('slow'); 
+</script>

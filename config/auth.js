@@ -1,16 +1,38 @@
 
+// module.exports = {
+//     ensureAuthenticated : function(req,res,next){
+//         console.log('\nensurr\n')
+//         if(req.isAuthenticated()){
+//             return next();
+//         }
+//         req.flash('error_msg','Please Login First to View Account')
+//         res.redirect('/login')
+//     },
+//     forwardAuthenticated : function(req,res,next){
+//         console.log('\nforward\n')
+//         if(!req.isAuthenticated()){
+//             return next();
+//         }
+//         req.flash('fade_msg','You Are Logged in')
+//         res.redirect('/welcome')
+//     }
+// }
+
 module.exports = {
-    ensureAuth : (req,res,next)=>{
-        if(req.isAuthenticated()){
-            return next();
-        }
-        req.flash('error_msg','Please Login First to View Account')
-        res.redirect('/login')
+    ensureAuthenticated: function(req, res, next) {
+      console.log('\nensurr\n')
+      if (req.isAuthenticated()) {
+        return next();
+      }
+      req.flash('error_msg', 'Please log in to view that resource');
+      res.redirect('/login');
     },
-    forwardAuth : (req,res,next)=>{
-        if(!req.isAuthenticated()){
-            return next()
-        }
-        res.redirect('/welcome')
+    forwardAuthenticated: function(req, res, next) {
+      console.log('\nForward\n')
+      if (!req.isAuthenticated()) {
+        return next();
+      }
+      res.redirect('/welcome');      
     }
-}
+  };
+  

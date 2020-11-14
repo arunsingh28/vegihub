@@ -46,9 +46,10 @@ app.use(
 
 // global varibles
 app.use((req,res,next)=>{
-    res.locals.success_msg = req.flash('success_msg');
-    res.locals.error_msg = req.flash('error_msg');
-    res.locals.error = req.flash('error');
+    res.locals.success_msg = req.flash('success_msg')
+    res.locals.error_msg = req.flash('error_msg')
+    res.locals.fade_msg = req.flash('fade_msg')
+    res.locals.error = req.flash('error')
     next();
 });
 
@@ -65,11 +66,11 @@ app.use('/vegiP',require('./controllers/postRequest'))
 
 
 // default route
-app.use('*',(req,res)=>{
-    res.render('404',{
-        title : 'Page Not Found'
-    })
-})
+// app.use('*',(req,res)=>{
+//     res.render('404',{
+//         title : 'Page Not Found'
+//     })
+// })
 
 // server start
 app.listen(process.env.PORT || 3000 ,console.log(`Server Running on PORT:3000`))

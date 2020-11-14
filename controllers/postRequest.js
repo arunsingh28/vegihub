@@ -17,9 +17,8 @@ post.post('/contact',(req,res)=>{
 
 // login
 post.post('/login',(req,res,next)=>{
-    console.log(req.flash)
    passport.authenticate('local',{
-       successRedirect : '/',
+       successRedirect : '/welcome',
        failureRedirect : '/login',
        failureFlash : true
    })(req,res, next);
@@ -32,7 +31,6 @@ post.post('/register',(req,res)=>{
         req.flash('error_msg','Password not Matching');
         res.redirect('/register')
     }
-
     userDB.findOne({email : email},(err,user)=>{
         if(user){
             req.flash('success_msg','This Email is Already Present .');

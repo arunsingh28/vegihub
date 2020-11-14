@@ -1,8 +1,8 @@
 const express = require('express')
-const { ensureAuth, forwardAuth } = require('../config/auth');
+const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
 const get = express.Router()
 
-get.get('/',forwardAuth,(req,res)=>{
+get.get('/',forwardAuthenticated,(req,res)=>{
     res.render('home',{
         title : 'Home',
         reg : true
@@ -10,7 +10,7 @@ get.get('/',forwardAuth,(req,res)=>{
 })
 
 
-get.get('/login',forwardAuth,(req,res)=>{
+get.get('/login',forwardAuthenticated,(req,res)=>{
     res.render('login',{
         title : 'Login',
         reg : true
@@ -19,22 +19,25 @@ get.get('/login',forwardAuth,(req,res)=>{
 
 
 // Logout
-get.get('/logout', (req, res) => {
-    req.logout();
-    req.flash('success_msg', 'You are logged out');
-    res.redirect('/');
-  });
+get.get('/logout',(req, res) => {
+    req.logout()
+    req.flash('fade_msg', 'You are logged out')
+    res.redirect('/')
+})
   
 
-get.get('/register',forwardAuth,(req,res)=>{
+get.get('/register',forwardAuthenticated,(req,res)=>{
     res.render('register',{
         title : 'Register',
         reg : false
     })
 })
 
-get.get('/welcome',ensureAuth,(req,res)=>{ 
-    res.send(req.user)
+
+
+get.get('/welcome',ensureAuthenticated,(req,res)=>{ 
+    console.log(req.user)
+    res.json(req.user)
 })
 
 
