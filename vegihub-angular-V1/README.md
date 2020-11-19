@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # VegihubAngularV1
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
@@ -25,3 +26,10 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+=======
+<<<<<<< HEAD
+Tracker for WorkFlow Design and Devlope by Arun.
+=======
+# Tracker
+>>>>>>> 8b70910aeade00769f099d3f8a2939925d10c23b
+>>>>>>> 7289ef7ac321498e52dfd6502612a4120276ac06

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
     <link rel="stylesheet" href="/css/indexPage.css">
     <link rel="stylesheet" href="/css/dot.css">
+    <link rel="stylesheet" href="/css/preloader.css">
 </head>
 <body>
     <%- body %>
@@ -18,8 +19,8 @@
     <script> 
         $(window).on('load', function() 
          { 
-         $('#status').fadeOut();  
-         $('#preloader').delay(350).fadeOut('slow');  
+         $('.box_container').fadeOut();  
+         $('.box').delay(350).fadeOut('slow');  
          $('body').delay(350).css({'overflow':'visible'});
          })
     </script>
