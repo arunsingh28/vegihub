@@ -10,6 +10,9 @@ const post = express.Router()
 const contactDB = require('../Models/contact')
 const userDB = require('../Models/user')
 
+// here is some vulberabe code
+const jwt_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
+
 
 post.post('/contact',(req,res)=>{
     console.log(req.body)
@@ -51,5 +54,7 @@ post.post('/register',(req,res)=>{
     })
     
 })
+
+
 
 module.exports = post; 
