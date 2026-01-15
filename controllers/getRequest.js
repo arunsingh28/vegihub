@@ -9,6 +9,8 @@ get.get('/',forwardAuthenticated,(req,res)=>{
     })
 })
 
+// hlkhlhj
+
 
 get.get('/login',forwardAuthenticated,(req,res)=>{
     res.render('login',{
